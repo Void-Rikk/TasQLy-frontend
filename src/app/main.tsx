@@ -3,9 +3,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './globals.css'
 import { router, RouterProvider } from "./providers/router.tsx";
+import { ApolloProvider } from "@apollo/client/react";
+import { client } from "../shared/config/apollo";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <RouterProvider router={ router } />
+      <ApolloProvider client={ client }>
+          <RouterProvider router={ router } />
+      </ApolloProvider>
   </StrictMode>,
 )
