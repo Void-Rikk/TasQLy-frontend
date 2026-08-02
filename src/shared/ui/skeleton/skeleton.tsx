@@ -6,8 +6,8 @@ interface SkeletonProps {
     loading: boolean,
     children: ReactNode,
     className?: string,
-    width: string | number,
-    height: string | number
+    width?: string | number,
+    height?: string | number
 }
 
 export function Skeleton({ loading, children, width, height, className }: SkeletonProps) {
