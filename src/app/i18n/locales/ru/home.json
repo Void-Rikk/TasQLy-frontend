@@ -1,40 +1,40 @@
 {
   "stats": {
-    "total_tasks": "ВСЕГО",
-    "active_tasks": "АКТИВНЫХ",
-    "done_tasks": "ЗАВЕРШЕНО"
+    "totalTasks": "ВСЕГО",
+    "activeTasks": "АКТИВНЫХ",
+    "doneTasks": "ЗАВЕРШЕНО"
   },
-  "new_task_section": {
+  "newTaskSection": {
     "header": "НОВАЯ ЗАДАЧА",
-    "title_label": "ЗАГОЛОВОК",
-    "title_placeholder": "Что нужно сделать?",
-    "description_label": "ОПИСАНИЕ",
-    "description_placeholder": "Добавьте дополнительную информацию...",
-    "priority_label": "ПРИОРИТЕТ",
+    "titleLabel": "ЗАГОЛОВОК",
+    "titlePlaceholder": "Что нужно сделать?",
+    "descriptionLabel": "ОПИСАНИЕ",
+    "descriptionPlaceholder": "Добавьте дополнительную информацию...",
+    "priorityLabel": "ПРИОРИТЕТ",
     "priority": {
       "high": "ВЫС",
       "medium": "СРЕД",
       "low": "НИЗ"
     },
-    "tags_label": "ТЭГИ",
-    "create_button": "СОЗДАТЬ ЗАДАЧУ"
+    "tagsLabel": "ТЭГИ",
+    "createButton": "СОЗДАТЬ ЗАДАЧУ"
   },
-  "search_section": {
-    "search_label": "ПОИСК",
-    "search_placeholder": "Поиск задач..."
+  "searchSection": {
+    "searchLabel": "ПОИСК",
+    "searchPlaceholder": "Поиск задач..."
   },
-  "status_filter_section": {
+  "statusFilterSection": {
     "header": "СТАТУС",
-    "all_tasks_option": "Все задачи"
+    "allTasksOption": "Все задачи"
   },
-  "tag_filter_section": {
+  "tagFilterSection": {
     "header": "ФИЛЬТР ПО ТЭГУ",
-    "all_tag": "Все"
+    "allTag": "Все"
   },
-  "task_status": {
+  "taskStatus": {
     "todo": "Сделать",
     "progress": "В процессе",
     "done": "Сделано"
   },
-  "task_advance_button": "ПРОДВИНУТЬ"
+  "taskAdvanceButton": "ПРОДВИНУТЬ"
 }

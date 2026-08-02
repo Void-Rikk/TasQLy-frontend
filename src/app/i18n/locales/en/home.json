@@ -1,40 +1,40 @@
 {
   "stats": {
-    "total_tasks": "TOTAL",
-    "active_tasks": "ACTIVE",
-    "done_tasks": "DONE"
+    "totalTasks": "TOTAL",
+    "activeTasks": "ACTIVE",
+    "doneTasks": "DONE"
   },
-  "new_task_section": {
+  "newTaskSection": {
     "header": "NEW TASK",
-    "title_label": "TITLE",
-    "title_placeholder": "What needs to be done?",
-    "description_label": "DESCRIPTION",
-    "description_placeholder": "Add some additional information...",
-    "priority_label": "PRIORITY",
+    "titleLabel": "TITLE",
+    "titlePlaceholder": "What needs to be done?",
+    "descriptionLabel": "DESCRIPTION",
+    "descriptionPlaceholder": "Add some additional information...",
+    "priorityLabel": "PRIORITY",
     "priority": {
       "high": "HIGH",
       "medium": "MED",
       "low": "LOW"
     },
-    "tags_label": "TAGS",
-    "create_button": "CREATE TASK"
+    "tagsLabel": "TAGS",
+    "createButton": "CREATE TASK"
   },
-  "search_section": {
-    "search_label": "SEARCH",
-    "search_placeholder": "Search tasks..."
+  "searchSection": {
+    "searchLabel": "SEARCH",
+    "searchPlaceholder": "Search tasks..."
   },
-  "status_filter_section": {
+  "statusFilterSection": {
     "header": "STATUS",
-    "all_tasks_option": "All tasks"
+    "allTasksOption": "All tasks"
   },
-  "tag_filter_section": {
+  "tagFilterSection": {
     "header": "FILTER BY TAG",
-    "all_tag": "All"
+    "allTag": "All"
   },
-  "task_status": {
+  "taskStatus": {
     "todo": "To Do",
     "progress": "In Progress",
     "done": "Done"
   },
-  "task_advance_button": "ADVANCE"
+  "taskAdvanceButton": "ADVANCE"
 }
