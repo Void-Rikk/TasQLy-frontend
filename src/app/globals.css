@@ -11,7 +11,7 @@
 
     body {
         margin: 0;
-        background-color: var(--color-background);
+        background-color: var(--bg-dark);
     }
 
     h1,
@@ -36,45 +36,74 @@
     button {
         font: inherit;
     }
+
+    :root {
+        --bg-dark: oklch(0.1 0 249);
+        --bg: oklch(0.25 0 249);
+        --bg-light: oklch(0.3 0 249);
+        --text: oklch(0.96 0 249);
+        --text-muted: oklch(0.76 0 249);
+        --highlight: oklch(0.5 0 249);
+        --border: oklch(0.4 0 249);
+        --border-muted: oklch(0.3 0 249);
+        --primary: oklch(0.76 0.1 249);
+        --secondary: oklch(0.76 0.1 69);
+        --danger: oklch(0.7 0.05 30);
+        --warning: oklch(0.7 0.05 100);
+        --success: oklch(0.7 0.05 160);
+        --info: oklch(0.7 0.05 260);
+        --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+        --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+        --border-card: 1px solid var(--bg);
+        --shadow-s:
+                inset 0 1px 2px #ffffff30,
+                0 1px 2px #00000030,
+                0 2px 4px #00000015;
+        --shadow-m:
+                inset 0 1px 2px #ffffff50,
+                0 2px 4px #00000030,
+                0 4px 8px #00000015;
+        --shadow-l:
+                inset 0 1px 2px #ffffff70,
+                0 4px 6px #00000030,
+                0 6px 10px #00000015;
+    }
+
+    body.light {
+        --bg-dark: oklch(0.92 0 249);
+        --bg: oklch(0.96 0 249);
+        --bg-light: oklch(1 0 249);
+        --text: oklch(0.15 0 249);
+        --text-muted: oklch(0.4 0 249);
+        --highlight: oklch(1 0 249);
+        --border: oklch(0.6 0 249);
+        --border-muted: oklch(0.7 0 249);
+        --primary: oklch(0.4 0.1 249);
+        --secondary: oklch(0.4 0.1 69);
+        --danger: oklch(0.5 0.05 30);
+        --warning: oklch(0.5 0.05 100);
+        --success: oklch(0.5 0.05 160);
+        --info: oklch(0.5 0.05 260);
+        --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+        --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+        --border-card: 1px solid var(--bg);
+    }
 }
 
 @theme {
     --font-sans: 'Exo 2', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    --color-primary-50: #E9DEFC;
-    --color-primary-100: #D9C6FA;
-    --color-primary-200: #BA97F6;
-    --color-primary-300: #9B69F1;
-    --color-primary-400: #7C3AED;
-    --color-primary-500: #5F14E0;
-    --color-primary-600: #4B10B1;
-    --color-primary-700: #370C82;
-    --color-primary-800: #240853;
-    --color-primary-900: #100325;
+    --animate-appearance: Appearance 0.5s ease-in-out;
 
-    --color-primary-foreground: #ffffff;
-
-    --color-secondary-50: #7c3aed;
-    --color-secondary-100: #7c42e1;
-    --color-secondary-200: #7d4ad5;
-    --color-secondary-300: #7d51c9;
-    --color-secondary-400: #7e59bd;
-    --color-secondary-500: #7e61b0;
-    --color-secondary-600: #7f69a4;
-    --color-secondary-700: #7f7098;
-    --color-secondary-800: #80788c;
-    --color-secondary-900: #808080;
-
-    --color-background: #05080f;
-    --color-foreground: #e2e8f8;
-
-    --color-muted: rgba(255, 255, 255, 0.06);
-    --color-muted-foreground: #64748b;
-
-    --color-success: rgb(34, 197, 94);
-    --color-warning: rgb(234, 179, 8);
-    --color-destructive: rgb(239, 68, 68);
-
-    --color-accent: #06b6d4;
+    @keyframes Appearance {
+        from {
+            transform: translateY(-5px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 100%;
+        }
+    }
 }

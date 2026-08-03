@@ -2,15 +2,16 @@ import type { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
 
 function Input({ className, ...props }: ComponentProps<"input">) {
-    const baseStyles = `text-primary-foreground bg-muted
+    const baseStyles = `text-(--text) 
+        bg-(image:--gradient)
         p-2
         text-sm
+        shadow-(--shadow-s)
         rounded-xl
-        ring-3 ring-transparent
-        border-1 border-muted-foreground
-        focus:outline-none
-        focus:border-primary-400
-        focus:ring-primary-800
+        outline-none
+        ring-1 ring-transparent
+        border-(--border-card) border-t-(--highlight)
+        focus:ring-(--secondary)
         transition-all`;
 
     return <input

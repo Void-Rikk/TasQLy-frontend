@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 interface SkeletonProps {
     loading: boolean,
-    children: ReactNode,
+    children?: ReactNode,
     className?: string,
     width?: string | number,
     height?: string | number
@@ -21,7 +21,7 @@ export function Skeleton({ loading, children, width, height, className }: Skelet
                 <span className="invisible">{children}</span>
                 <span
                     aria-hidden="true"
-                    className={ twMerge(`absolute inset-0 animate-pulse rounded-md bg-gray-400`, className)}
+                    className={ twMerge(`absolute inset-0 animate-pulse shadow-(--shadow-s) rounded-md bg-linear-to-b from-gray-400 to-gray-500`, className)}
                 />
             </span>
         );
@@ -31,7 +31,7 @@ export function Skeleton({ loading, children, width, height, className }: Skelet
         <span
             aria-hidden="true"
             style={{ width, height }}
-            className={ twMerge(`inline-block animate-pulse rounded-md bg-gray-400`, className)}
+            className={ twMerge(`inline-block animate-pulse shadow-(--shadow-s) rounded-md bg-linear-to-b from-gray-400 to-gray-500`, className)}
         />
     );
 }

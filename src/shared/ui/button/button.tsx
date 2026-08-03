@@ -3,10 +3,12 @@ import { twMerge } from "tailwind-merge";
 
 
 function Button({ className, children, ...props }: ComponentProps<"button">) {
-    const baseStyles = `border-1 border-primary-300 
-            shadow-lg shadow-primary-100
-            rounded-xl px-6 py-2 text-primary-foreground bg-primary-400 
-            hover:cursor-pointer hover:ring-1 hover:ring-primary-200
+    const baseStyles = `text-(--text)
+            bg-(image:--gradient)
+            border-(--border-card) border-t-(--highlight)
+            rounded-xl px-6 py-2 
+            shadow-(--shadow-s)
+            hover:cursor-pointer hover:bg-(image:--gradient-hover)
             transition-all`;
 
     return <button
