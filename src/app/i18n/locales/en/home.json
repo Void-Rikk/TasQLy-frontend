@@ -42,7 +42,11 @@
       "low": "LOW"
     },
     "tagsLabel": "TAGS",
-    "createButton": "CREATE TASK"
+    "createButton": "CREATE TASK",
+    "success": "Task was successfully created",
+    "loading": "Creating new task",
+    "error": "An error occurred",
+    "tagsLoading": "Loading your tags"
   },
   "searchSection": {
     "searchLabel": "SEARCH",

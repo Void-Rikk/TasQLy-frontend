@@ -42,7 +42,11 @@
       "low": "НИЗ"
     },
     "tagsLabel": "ТЭГИ",
-    "createButton": "СОЗДАТЬ ЗАДАЧУ"
+    "createButton": "СОЗДАТЬ ЗАДАЧУ",
+    "success": "Задача была успешно создана",
+    "loading": "Создание задачи",
+    "error": "Возникла ошибка",
+    "tagsLoading": "Загружаем ваши теги"
   },
   "searchSection": {
     "searchLabel": "ПОИСК",
