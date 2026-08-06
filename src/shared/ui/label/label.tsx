@@ -2,7 +2,7 @@ import { Label as RLabel } from "radix-ui";
 import { twMerge } from "tailwind-merge";
 
 function Label({ className, children, ...props }: RLabel.LabelProps) {
-    const baseStyles = "font-mono uppercase text-(--text) text-sm tracking-widest";
+    const baseStyles = "font-mono uppercase text-(--text-muted) text-xs tracking-widest pl-2";
 
     return <RLabel.Root
         className={ twMerge(baseStyles, className) }
