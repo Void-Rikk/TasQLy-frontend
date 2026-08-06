@@ -1,5 +1,5 @@
 import { type SubmitEventHandler, useState } from "react";
-import { ExpanseButton } from "./expanse-button.tsx";
+import { ExpanseButton } from "../../../shared/ui/expanse-button";
 import { useCreateTaskForm } from "../model/hooks.ts";
 import { Button } from "../../../shared/ui/button";
 import { CreateTaskFormFields } from "./create-task-form-fields.tsx";
@@ -7,6 +7,7 @@ import { useTags } from "../../../entities/tag";
 import { useTranslation } from "react-i18next";
 import { useCreateTask } from "../../../entities/task";
 import toast from "react-hot-toast";
+import { Plus } from "lucide-react";
 
 export function CreateTaskForm() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -54,6 +55,12 @@ export function CreateTaskForm() {
             <ExpanseButton
                 isOpen={ isOpen }
                 setIsOpen={ setIsOpen }
+                content={ <>
+                    <Plus
+                        className={ `w-5 h-5 text-(--primary) rounded-md bg-(--bg-light) shadow-(--shadow-s)` }
+                    />
+                    { t("newTaskSection.header") }
+                </> }
             />
             <form
                 className={ `p-4 flex flex-col gap-4  ${!isOpen ? "hidden" : ""}` }

@@ -1,16 +1,15 @@
-import { ChevronUp, Plus } from "lucide-react";
-import { Button } from "../../../shared/ui/button";
-import type { Dispatch, SetStateAction } from "react";
-import { useTranslation } from "react-i18next";
+import { ChevronUp } from "lucide-react";
+import { Button } from "../button";
+import type { Dispatch, ReactNode, SetStateAction } from "react";
 
 
 interface ExpanseButtonProps {
     isOpen: boolean;
     setIsOpen: Dispatch<SetStateAction<boolean>>;
+    content: ReactNode;
 }
 
-export function ExpanseButton({ isOpen, setIsOpen }: ExpanseButtonProps) {
-    const { t } = useTranslation("home");
+export function ExpanseButton({ isOpen, setIsOpen, content }: ExpanseButtonProps) {
 
     return (
         <Button
@@ -23,10 +22,8 @@ export function ExpanseButton({ isOpen, setIsOpen }: ExpanseButtonProps) {
             <div
                 className={ `flex gap-2 items-center tracking-widest` }
             >
-                <Plus
-                    className={ `w-5 h-5 text-(--primary) rounded-md bg-(--bg-light) shadow-(--shadow-s)` }
-                />
-                { t("newTaskSection.header") }
+                { content }
+
             </div>
             <ChevronUp
                 className={ `w-5 h-5 text-(--text-muted) ${ !isOpen ? "animate-open-rotate" : "animate-close-rotate" }` }
