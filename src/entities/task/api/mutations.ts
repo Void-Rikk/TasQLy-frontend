@@ -3,7 +3,7 @@ import type { Task, TaskPriority } from "../model/types.ts";
 
 
 type CreateTaskMutation = {
-    task: Task;
+    createTask: Task;
 }
 
 type CreateTaskMutationVariables = {
