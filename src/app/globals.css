@@ -52,6 +52,12 @@
         --warning: oklch(0.7 0.05 100);
         --success: oklch(0.7 0.05 160);
         --info: oklch(0.7 0.05 260);
+        --high: rgb(239, 68, 68);
+        --medium: rgb(249, 115, 22);
+        --low: rgb(34, 197, 94);
+        --glow-low: 0 0 8px var(--low);
+        --glow-medium: 0 0 8px var(--medium);
+        --glow-high: 0 0 8px var(--high);
         --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
         --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
         --border-card: 1px solid var(--bg);
@@ -84,6 +90,12 @@
         --warning: oklch(0.5 0.05 100);
         --success: oklch(0.5 0.05 160);
         --info: oklch(0.5 0.05 260);
+        --high: rgb(239, 68, 68);
+        --medium: rgb(249, 115, 22);
+        --low: rgb(34, 197, 94);
+        --glow-low: 0 0 8px var(--low);
+        --glow-medium: 0 0 8px var(--medium);
+        --glow-high: 0 0 8px var(--high);
         --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
         --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
         --border-card: 1px solid var(--bg);
@@ -104,6 +116,52 @@
         to {
             transform: translateY(0);
             opacity: 100%;
+        }
+    }
+
+    --animate-open-rotate: OpenRotation 0.1s ease-in-out forwards;
+
+    @keyframes OpenRotation {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(-180deg);
+        }
+    }
+
+    --animate-close-rotate: CloseRotation 0.1s ease-in-out forwards;
+
+    @keyframes CloseRotation {
+        from {
+            transform: rotate(-180deg);
+        }
+        to {
+            transform: rotate(0);
+        }
+    }
+
+    --animate-overlay-show: OverlayShow 150ms ease-in-out;
+
+    @keyframes OverlayShow {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+
+    --animate-content-show: ContentShow 150ms ease-in-out;
+
+    @keyframes ContentShow {
+        from {
+            opacity: 0;
+            transform: scale(0.96);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
         }
     }
 }

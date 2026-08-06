@@ -5,11 +5,13 @@ import './globals.css'
 import { router, RouterProvider } from "./providers/router.tsx";
 import { ApolloProvider } from "@apollo/client/react";
 import { client } from "../shared/config/apollo";
+import { ToasterProvider } from "./providers/toaster-provider.tsx";
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-      <ApolloProvider client={ client }>
-          <RouterProvider router={ router } />
-      </ApolloProvider>
-  </StrictMode>,
+    <StrictMode>
+        <ApolloProvider client={client}>
+            <RouterProvider router={router}/>
+            <ToasterProvider />
+        </ApolloProvider>
+    </StrictMode>,
 )
