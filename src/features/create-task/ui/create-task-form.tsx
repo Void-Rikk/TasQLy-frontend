@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { useCreateTask } from "../../../entities/task";
 import toast from "react-hot-toast";
 import { Plus } from "lucide-react";
+import { Separator } from "../../../shared/ui/separator";
 
 export function CreateTaskForm() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -44,7 +45,7 @@ export function CreateTaskForm() {
 
     return (
         <section
-            className={ `mt-20 ml-100
+            className={ `
             bg-(image:--gradient)
             border-(--border-card) border-t-(--highlight)
             rounded-xl
@@ -62,11 +63,11 @@ export function CreateTaskForm() {
                     { t("newTaskSection.header") }
                 </> }
             />
-            <form
+            <form // ToDo: нужна декомпозиция
                 className={ `p-4 flex flex-col gap-4  ${!isOpen ? "hidden" : ""}` }
                 onSubmit={ onSubmit }
             >
-                <div className={`h-[1px] bg-linear-to-l from-(--bg) from-5% via-gray-500 to(--bg) to-95%`}></div>
+                <Separator />
                 <CreateTaskFormFields
                     form={ form }
                     setters={ setters }
