@@ -41,10 +41,20 @@
       "medium": "СРЕД",
       "low": "НИЗ"
     },
-    "tagsLabel": "ТЭГИ",
+    "tagsLabel": "ТЕГИ",
     "createButton": "СОЗДАТЬ ЗАДАЧУ",
     "success": "Задача была успешно создана",
     "loading": "Создание задачи",
+    "error": "Возникла ошибка",
+    "tagsLoading": "Загружаем ваши теги"
+  },
+  "manageTagsSection": {
+    "header": "УПРАВЛЕНИЕ ТЕГАМИ",
+    "nameLabel": "Название",
+    "namePlaceholder": "Введие название тега",
+    "createButton": "СОЗДАТЬ ТЕГ",
+    "success": "Тег был успешно создан",
+    "loading": "Создание тега",
     "error": "Возникла ошибка",
     "tagsLoading": "Загружаем ваши теги"
   },
@@ -57,7 +67,7 @@
     "allTasksOption": "Все задачи"
   },
   "tagFilterSection": {
-    "header": "ФИЛЬТР ПО ТЭГУ",
+    "header": "ФИЛЬТР ПО ТЕГУ",
     "allTag": "Все"
   },
   "taskStatus": {

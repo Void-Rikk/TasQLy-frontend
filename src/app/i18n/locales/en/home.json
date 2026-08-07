@@ -48,6 +48,16 @@
     "error": "An error occurred",
     "tagsLoading": "Loading your tags"
   },
+  "manageTagsSection": {
+    "header": "MANAGE TAGS",
+    "nameLabel": "NAME",
+    "namePlaceholder": "Enter tag name",
+    "createButton": "CREATE TAG",
+    "success": "Tag was successfully created",
+    "loading": "Creating new tag",
+    "error": "An error occurred",
+    "tagsLoading": "Loading your tags"
+  },
   "searchSection": {
     "searchLabel": "SEARCH",
     "searchPlaceholder": "Search tasks..."
