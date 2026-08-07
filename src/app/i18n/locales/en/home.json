@@ -56,6 +56,9 @@
     "success": "Tag was successfully created",
     "loading": "Creating new tag",
     "error": "An error occurred",
+    "deleteSuccess": "Tag was successfully deleted",
+    "deleteLoading": "Deleting tag",
+    "deleteError": "An error occurred",
     "tagsLoading": "Loading your tags"
   },
   "searchSection": {

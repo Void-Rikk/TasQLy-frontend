@@ -56,6 +56,9 @@
     "success": "Тег был успешно создан",
     "loading": "Создание тега",
     "error": "Возникла ошибка",
+    "deleteSuccess": "Тег успешно удалён",
+    "deleteLoading": "Удаление тега",
+    "deleteError": "Возникла ошибка",
     "tagsLoading": "Загружаем ваши теги"
   },
   "searchSection": {
