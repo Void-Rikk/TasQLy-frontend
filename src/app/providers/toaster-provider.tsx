@@ -10,7 +10,8 @@ export function ToasterProvider() {
                 backgroundImage: "var(--gradient)",
                 color: "var(--text)",
                 boxShadow: "var(--shadow-s)",
-                border: "var(--border-card)"
+                border: "var(--border-card)",
+                borderRadius: "20px"
             },
 
             success: {
