@@ -12,7 +12,7 @@ export function calculateTaskStats(tasks: Task[]): TaskStats {
 
     for (const task of tasks) {
         stats.totalTasks++;
-        if (task.done) {
+        if (task.status === "DONE") {
             stats.doneTasks++;
         }
         else {

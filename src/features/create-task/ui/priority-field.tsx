@@ -1,7 +1,7 @@
 import { FieldWrapper } from "../../../shared/ui/field-wrapper";
 import { Label } from "../../../shared/ui/label";
 import { RadioGroup, RadioItem } from "../../../shared/ui/radio-group";
-import type { TaskPriority } from "../../../entities/task/model/types.ts";
+import type { TaskPriority } from "../../../entities/task";
 import { TagItem } from "../../../shared/ui/tag-item";
 import { useTranslation } from "react-i18next";
 import type { Dispatch, SetStateAction } from "react";

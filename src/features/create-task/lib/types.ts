@@ -1,5 +1,5 @@
 import type { Task } from "../../../entities/task";
-import type { TaskPriority } from "../../../entities/task/model/types.ts";
+import type { TaskPriority } from "../../../entities/task";
 
 export type CreateTaskForm = {
     tags: Set<string>,

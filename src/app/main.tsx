@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './globals.css'
 import { router, RouterProvider } from "./providers/router.tsx";
 import { ApolloProvider } from "@apollo/client/react";
-import { client } from "../shared/config/apollo";
+import { client } from "../shared/config";
 import { ToasterProvider } from "./providers/toaster-provider.tsx";
 
 createRoot(document.getElementById('root')!).render(

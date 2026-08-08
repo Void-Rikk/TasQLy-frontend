@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { TaskPriority } from "../../../entities/task/model/types.ts";
+import type { TaskPriority } from "../../../entities/task";
 import type { CreateTaskForm, CreateTaskFormSetters } from "../lib/types.ts";
 
 

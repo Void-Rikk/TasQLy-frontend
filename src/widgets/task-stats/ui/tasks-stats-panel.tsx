@@ -1,7 +1,7 @@
 import { useTasks } from "../../../entities/task";
-import { calculateTaskStats } from "../../../entities/task/model/stats.ts";
+import { calculateTaskStats } from "../../../entities/task";
 import { Skeleton } from "../../../shared/ui/skeleton";
-import { StatItem } from "../../../shared/ui/stat-item/stat-item.tsx";
+import { StatItem } from "../../../shared/ui/stat-item";
 import { useTranslation } from "react-i18next";
 
 
