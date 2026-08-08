@@ -45,7 +45,7 @@
     "createButton": "СОЗДАТЬ ЗАДАЧУ",
     "success": "Задача была успешно создана",
     "loading": "Создание задачи",
-    "error": "Возникла ошибка",
+    "error": "Возникла ошибка при создании задачи",
     "tagsLoading": "Загружаем ваши теги"
   },
   "manageTagsSection": {
@@ -58,7 +58,7 @@
     "error": "Возникла ошибка",
     "deleteSuccess": "Тег успешно удалён",
     "deleteLoading": "Удаление тега",
-    "deleteError": "Возникла ошибка",
+    "deleteError": "Возникла ошибка при удалении тега",
     "tagsLoading": "Загружаем ваши теги"
   },
   "searchSection": {
@@ -74,9 +74,14 @@
     "allTag": "Все"
   },
   "taskStatus": {
-    "todo": "Сделать",
-    "progress": "В процессе",
-    "done": "Сделано"
+    "TO_DO": "Сделать",
+    "IN_PROGRESS": "В процессе",
+    "DONE": "Сделано"
+  },
+  "deleteTaskStatus": {
+    "loading": "Удаление задачи",
+    "error": "Возникла ошибка при удалении задачи",
+    "success": "Задача успешно удалена"
   },
   "taskAdvanceButton": "ПРОДВИНУТЬ"
 }

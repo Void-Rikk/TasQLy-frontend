@@ -45,7 +45,7 @@
     "createButton": "CREATE TASK",
     "success": "Task was successfully created",
     "loading": "Creating new task",
-    "error": "An error occurred",
+    "error": "An error occurred while creating task",
     "tagsLoading": "Loading your tags"
   },
   "manageTagsSection": {
@@ -58,7 +58,7 @@
     "error": "An error occurred",
     "deleteSuccess": "Tag was successfully deleted",
     "deleteLoading": "Deleting tag",
-    "deleteError": "An error occurred",
+    "deleteError": "An error occurred while deleting tag",
     "tagsLoading": "Loading your tags"
   },
   "searchSection": {
@@ -74,9 +74,14 @@
     "allTag": "All"
   },
   "taskStatus": {
-    "todo": "To Do",
-    "progress": "In Progress",
-    "done": "Done"
+    "TO_DO": "To Do",
+    "IN_PROGRESS": "In Progress",
+    "DONE": "Done"
+  },
+  "deleteTaskStatus": {
+    "loading": "Deleting task",
+    "error": "An error occurred while deleting task",
+    "success": "Task was successfully deleted"
   },
   "taskAdvanceButton": "ADVANCE"
 }
