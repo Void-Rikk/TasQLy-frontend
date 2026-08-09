@@ -88,5 +88,6 @@
     "error": "An error occurred while advancing the task",
     "success": "The task was successfully advanced"
   },
+  "taskListHeader": "ALL TASKS",
   "taskAdvanceButton": "ADVANCE"
 }

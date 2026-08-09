@@ -18,8 +18,8 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
 
     return (
         <div
-            className={ `
-            p-4 flex flex-col gap-2 relative
+            className={ `min-h-35 max-h-40 w-150
+            p-4 flex flex-col gap-2 justify-between relative
             bg-(image:--gradient) rounded-xl 
             border-(--border-card) shadow-(--shadow-m) group animate-appearance` }
         >
@@ -48,6 +48,7 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
                 className={ `text-(--text-muted) text-sm truncate w-[85%]` }
             >
                 { task.description }
+                { !task.description && <p aria-hidden="true" className={ `opacity-0` }>desc</p> }
             </p>
             <div
                 className={ `flex flex-wrap gap-1.5` }
@@ -59,6 +60,8 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
                         name={ name }
                     />
                 )) }
+                { task.tags.length === 0 &&
+                    <TagItem aria-hidden="true" className={ "opacity-0 hover:cursor-default" } name={"h"} /> }
             </div>
             <footer
                 className={ `flex justify-end` }
