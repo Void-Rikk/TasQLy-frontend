@@ -83,5 +83,10 @@
     "error": "An error occurred while deleting task",
     "success": "Task was successfully deleted"
   },
+  "advanceTaskStatus": {
+    "loading": "Advancing the task",
+    "error": "An error occurred while advancing the task",
+    "success": "The task was successfully advanced"
+  },
   "taskAdvanceButton": "ADVANCE"
 }
