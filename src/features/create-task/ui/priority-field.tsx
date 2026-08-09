@@ -4,12 +4,11 @@ import { RadioGroup, RadioItem } from "../../../shared/ui/radio-group";
 import type { TaskPriority } from "../../../entities/task";
 import { TagItem } from "../../../shared/ui/tag-item";
 import { useTranslation } from "react-i18next";
-import type { Dispatch, SetStateAction } from "react";
 
 
 interface PriorityFieldsProps {
     priority: TaskPriority;
-    setPriority: Dispatch<SetStateAction<TaskPriority>>;
+    setPriority: (newPriority: TaskPriority) => void;
 }
 
 export function PriorityField({ priority, setPriority }: PriorityFieldsProps) {

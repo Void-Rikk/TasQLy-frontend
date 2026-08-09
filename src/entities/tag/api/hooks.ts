@@ -11,6 +11,8 @@ export function useTags() {
 export function useCreateTag() {
     return useMutation(CREATE_TAG, {
         update(cache, { data }) {
+            if (!data) return;
+
             const newTag = data.createTag;
 
             cache.modify({
@@ -31,6 +33,8 @@ export function useCreateTag() {
 export function useDeleteTag() {
     return useMutation(DELETE_TAG, {
         update(cache, { data }, { variables }) {
+            if (!data || !variables) return;
+
             if (data?.deleteTag) {
                 cache.evict({ id: cache.identify({ __typename: "Tag", id: variables.id }) });
                 cache.gc();

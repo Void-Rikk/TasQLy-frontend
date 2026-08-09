@@ -1,4 +1,3 @@
-import type { Dispatch, SetStateAction } from "react";
 import { FieldWrapper } from "../../../shared/ui/field-wrapper";
 import { Label } from "../../../shared/ui/label";
 import { Input } from "../../../shared/ui/input";
@@ -7,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 interface NameFieldProps {
     name: string;
-    setName: Dispatch<SetStateAction<string>>;
+    setName: (newName: string) => void
 }
 
 export function NameField({ name, setName }: NameFieldProps) {

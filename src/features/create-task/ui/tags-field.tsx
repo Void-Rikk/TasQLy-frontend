@@ -4,13 +4,12 @@ import { Checkbox } from "../../../shared/ui/checkbox";
 import { TagItem } from "../../../shared/ui/tag-item";
 import type { Tag } from "../../../entities/tag";
 import { useTranslation } from "react-i18next";
-import type { Dispatch, SetStateAction } from "react";
 import { LoaderCircle } from "lucide-react";
 
 
 interface TagsFieldProps {
     tagsState: Set<string>;
-    setTags: Dispatch<SetStateAction<string>>;
+    setTags: (tagName: string) => void;
     tags: Tag[];
     tagsLoading: boolean;
 }

@@ -20,8 +20,7 @@ export function ManageTagsPanel() {
             border-(--border-card) border-t-(--highlight)
             rounded-xl
             shadow-(--shadow-s)
-            animate-appearance
-            w-80` }
+            animate-appearance` }
         >
             <ExpanseButton
                 isOpen={ isOpen }

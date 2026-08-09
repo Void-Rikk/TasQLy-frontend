@@ -110,7 +110,7 @@
 
     @keyframes Appearance {
         from {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             opacity: 0;
         }
         to {

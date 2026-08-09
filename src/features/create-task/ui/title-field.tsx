@@ -2,11 +2,11 @@ import { FieldWrapper } from "../../../shared/ui/field-wrapper";
 import { Label } from "../../../shared/ui/label";
 import { Input } from "../../../shared/ui/input";
 import { useTranslation } from "react-i18next";
-import type { Dispatch, SetStateAction } from "react";
+
 
 interface TitleFieldProps {
     title: string;
-    setTitle: Dispatch<SetStateAction<string>>
+    setTitle: (newTitle: string) => void;
 }
 
 export function TitleField({ title, setTitle }: TitleFieldProps) {

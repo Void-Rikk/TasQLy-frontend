@@ -10,6 +10,8 @@ export function useTasks() {
 export function useCreateTask() {
     return useMutation(CREATE_TASK, {
         update(cache, { data }) {
+            if (!data) return;
+
             cache.modify({
                 fields: {
                     tasks(existingTasks = []) {
@@ -28,6 +30,8 @@ export function useCreateTask() {
 export function useDeleteTask() {
     return useMutation(DELETE_TASK, {
         update(cache, { data }, { variables }) {
+            if (!data || !variables) return;
+
             if (data?.deleteTask) {
                 cache.evict({ id: cache.identify({ __typename: "Task", id: variables.id }) });
                 cache.gc();

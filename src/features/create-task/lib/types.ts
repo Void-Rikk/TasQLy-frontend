@@ -3,7 +3,8 @@ import type { TaskPriority } from "../../../entities/task";
 
 export type CreateTaskForm = {
     tags: Set<string>,
-} & Omit<Task, "id" | "tags" | "status">;
+    description: string;
+} & Omit<Task, "id" | "tags" | "status" | "description">;
 
 export type CreateTaskFormSetters = {
     resetForm: () => void,

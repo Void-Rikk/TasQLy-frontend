@@ -53,14 +53,14 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
             <div
                 className={ `flex flex-wrap gap-1.5` }
             >
-                { task.tags.map(({ id, name }) => (
+                { task.tags && task.tags.map(({ id, name }) => (
                     <TagItem
                         className={ `border-none border-(--border-card) shadow-(--shadow-s) hover:cursor-default` }
                         key={ id }
                         name={ name }
                     />
                 )) }
-                { task.tags.length === 0 &&
+                { task.tags && task.tags.length === 0 &&
                     <TagItem aria-hidden="true" className={ "opacity-0 hover:cursor-default" } name={"h"} /> }
             </div>
             <footer

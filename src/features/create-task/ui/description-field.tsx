@@ -2,12 +2,11 @@ import { FieldWrapper } from "../../../shared/ui/field-wrapper";
 import { Label } from "../../../shared/ui/label";
 import { Textarea } from "../../../shared/ui/textarea";
 import { useTranslation } from "react-i18next";
-import type { Dispatch, SetStateAction } from "react";
 
 
 interface DescriptionFieldProps {
     description: string;
-    setDescription: Dispatch<SetStateAction<string>>;
+    setDescription: (newDescription: string) => void;
 }
 
 export function DescriptionField({ description, setDescription }: DescriptionFieldProps) {

@@ -9,7 +9,7 @@ export function Header() {
 
     return (
         <header
-            className={ `flex flex-col gap-2` }
+            className={ `flex flex-col gap-2 items-center animate-appearance` }
         >
             <h1
                 className={ `text-(--text) text-3xl font-semibold uppercase
