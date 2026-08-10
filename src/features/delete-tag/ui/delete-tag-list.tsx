@@ -33,7 +33,7 @@ export function DeleteTagList({ tags }: DeleteTagListProps) {
     return (
         <>
             <Separator />
-            <div className="p-4 flex flex-wrap gap-2">
+            <div className="p-4 flex flex-wrap gap-2 max-w-80">
                 {
                     tags.map(({ id, name }) => (
                         <DeleteTagListItem
