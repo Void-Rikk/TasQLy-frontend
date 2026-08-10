@@ -73,6 +73,9 @@
                 inset 0 1px 2px #ffffff70,
                 0 4px 6px #00000030,
                 0 6px 10px #00000015;
+        --shadow-inset-s:
+                inset 0 1px 3px #ffffff30,
+                inset 1px 0 3px #ffffff30;
     }
 
     body.light {
@@ -99,6 +102,21 @@
         --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
         --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
         --border-card: 1px solid var(--bg);
+        --shadow-s:
+                inset 0 1px 2px #ffffff30,
+                0 1px 2px #00000030,
+                0 2px 4px #00000015;
+        --shadow-m:
+                inset 0 1px 2px #ffffff50,
+                0 2px 4px #00000030,
+                0 4px 8px #00000015;
+        --shadow-l:
+                inset 0 1px 2px #ffffff70,
+                0 4px 6px #00000030,
+                0 6px 10px #00000015;
+        --shadow-inset-s:
+                inset 0 1px 2px #00000080,
+                inset 1px 0 2px #00000080;
     }
 }
 
@@ -162,6 +180,28 @@
         to {
             opacity: 1;
             transform: scale(1);
+        }
+    }
+
+    --animate-slide-right: SlideRight 0.2s ease-in-out forwards;
+
+    @keyframes SlideRight {
+        from {
+            transform: translateX(14%);
+        }
+        to {
+            transform: translateX(128%);
+        }
+    }
+
+    --animate-slide-left: SlideLeft 0.2s ease-in-out forwards;
+
+    @keyframes SlideLeft {
+        from {
+            transform: translateX(128%);
+        }
+        to {
+            transform: translateX(14%);
         }
     }
 }
