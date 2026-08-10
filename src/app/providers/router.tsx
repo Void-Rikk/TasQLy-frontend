@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter } from "react-router";
 import { HomePage } from "../../pages/home-page";
 
 
@@ -10,4 +10,4 @@ const router = createBrowserRouter([
     }
 ]);
 
-export { router, RouterProvider };
+export { router };

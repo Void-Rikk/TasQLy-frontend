@@ -14,7 +14,7 @@ export function useCreateTaskForm(): [CreateTaskForm, CreateTaskFormSetters] {
     const [form, setForm] = useState<CreateTaskForm>(initialFormState);
 
     const resetForm = () => {
-        setForm(_ => ({ ...initialFormState }));
+        setForm(() => ({ ...initialFormState }));
     }
 
     const setTitle = (newTitle: string) => {
