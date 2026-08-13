@@ -33,7 +33,7 @@ export function AdvanceTaskButton({ id, status }: AdvanceTaskButtonProps) {
         <Button
             className={ `flex gap-1 items-center
             py-0 px-2
-            text-xs text-(--text-muted) hover:text-(--text)` }
+            text-xs text-(--text-muted) hover:text-(--text) max-md:text-(--text)` }
             onClick={ onAdvance }
             disabled={ advancingTask || status === "DONE" }
         >

@@ -28,7 +28,8 @@ export function StatItem({ label, value, color }: StatItemProps) {
             className={ `flex flex-col p-4 text-(--text)
             bg-(image:--gradient-hover) rounded-xl w-27
             shadow-(--shadow-s)
-            border-(--border-card)` }
+            border-(--border-card)
+            max-md:w-full` }
         >
             <p
                 className={ `text-2xl font-bold ${styles.text}` }

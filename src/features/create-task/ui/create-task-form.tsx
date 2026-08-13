@@ -50,7 +50,8 @@ export function CreateTaskForm() {
             border-(--border-card) border-t-(--highlight)
             rounded-xl
             shadow-(--shadow-s)
-            animate-appearance` }
+            animate-appearance
+            max-md:w-full` }
         >
             <ExpanseButton
                 isOpen={ isOpen }

@@ -17,7 +17,7 @@ export function TasksStatsPanel() {
     const stats = calculateTaskStats(data ? data.tasks : []);
 
     return (
-        <div className="flex gap-2 animate-appearance">
+        <div className={ `flex gap-2 animate-appearance max-md:flex-col` }>
             { Object.entries(stats).map(([label, value]) => (
                 <StatItem
                     key={ label }

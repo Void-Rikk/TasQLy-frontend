@@ -1,3 +1,3 @@
-import { getCurrentDate } from "./utils.ts";
+import { getCurrentDate, useMedia } from "./utils.ts";
 
-export { getCurrentDate };
+export { getCurrentDate, useMedia };

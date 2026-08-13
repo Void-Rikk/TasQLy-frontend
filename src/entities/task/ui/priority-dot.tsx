@@ -9,7 +9,7 @@ export function PriorityDot({ priority }: PriorityDotProps) {
 
     return (
         <span
-            className={ `inline-block size-2.5 rounded-full ${styles[priority].shadow} ${styles[priority].bg}` }
+            className={ `inline-block size-2.5 min-w-2.5 rounded-full ${styles[priority].shadow} ${styles[priority].bg}` }
         >
         </span>
     );

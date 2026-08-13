@@ -13,7 +13,7 @@ export function TasksSection() {
 
     return (
         <section
-            className={ `flex flex-col gap-3 min-w-100` }
+            className={ `flex flex-col gap-3 min-w-100 max-md:min-w-full` }
         >
             <header
                 className={ `flex gap-2 text-(--text-muted) items-center` }
@@ -37,7 +37,7 @@ export function TasksSection() {
                 </div>
             </header>
             <ul
-                className={ `list-none flex flex-col gap-3 w-150` }
+                className={ `list-none flex flex-col gap-3 w-150 max-md:w-full` }
             >
                 { tasksData && tasksData.tasks.map(task => (
                     <li

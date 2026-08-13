@@ -30,7 +30,8 @@ export function DeleteTaskButton({ id }: DeleteTaskButtonProps ) {
 
     return (
         <Button
-            className={ `opacity-0 p-1 size-6 flex justify-center items-center group-hover:opacity-100` }
+            className={ `opacity-0 p-1 size-6 flex justify-center items-center group-hover:opacity-100
+            max-md:opacity-100` }
             onClick={ onDelete }
             disabled={ deletingTask }
         >
