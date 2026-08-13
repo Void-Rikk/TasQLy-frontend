@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <script>
+            (function () {
+                const theme = localStorage.getItem('app-theme');
+                try {
+                    const parsed = JSON.parse(theme);
+                    if (parsed?.state?.theme === 'light') {
+                        document.body.classList.add('light');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./assets/GraphQL-CRKGi5pc.png" rel="icon">
+        <title>TasQLy</title>
+      <script type="module" crossorigin src="./assets/index-tKpyGOsQ.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-DbN356Kg.css">
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
