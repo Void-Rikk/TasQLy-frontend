@@ -27,6 +27,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: cat dist/index.html
 
         env:
           VITE_API_URL: http://gql
