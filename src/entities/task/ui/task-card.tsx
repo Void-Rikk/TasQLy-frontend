@@ -1,7 +1,6 @@
 import type { Task } from "../model/types.ts";
 import type { ReactNode } from "react";
 import { PriorityDot } from "./priority-dot.tsx";
-import { TagItem } from "../../../shared/ui/tag-item";
 import { PriorityLight } from "./priority-light.tsx";
 import { Overlay } from "../../../shared/ui/overlay";
 import { useMedia } from "../../../shared/lib/utils";
@@ -55,19 +54,6 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
                 { task.description }
                 { !task.description && <p aria-hidden="true" className={ `opacity-0` }>desc</p> }
             </p>
-            <div
-                className={ `flex flex-wrap gap-1.5 max-md:flex-nowrap max-md:overflow-hidden` }
-            >
-                { task.tags && task.tags.map(({ id, name }) => (
-                    <TagItem
-                        className={ `border-none border-(--border-card) shadow-(--shadow-s) hover:cursor-default` }
-                        key={ id }
-                        name={ name }
-                    />
-                )) }
-                { task.tags && task.tags.length === 0 &&
-                    <TagItem aria-hidden="true" className={ "opacity-0 hover:cursor-default" } name={"h"} /> }
-            </div>
             <footer
                 className={ `flex justify-end max-md:justify-between` }
             >

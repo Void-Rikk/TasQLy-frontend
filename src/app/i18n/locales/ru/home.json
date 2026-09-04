@@ -32,7 +32,7 @@
   "newTaskSection": {
     "header": "НОВАЯ ЗАДАЧА",
     "titleLabel": "ЗАГОЛОВОК",
-    "titlePlaceholder": "Что нужно сделать?",
+    "titlePlaceholder": "Что нужно сдлаатъ?",
     "descriptionLabel": "ОПИСАНИЕ",
     "descriptionPlaceholder": "Добавьте дополнительную информацию...",
     "priorityLabel": "ПРИОРИТЕТ",
