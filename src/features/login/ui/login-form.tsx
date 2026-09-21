@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { Button } from "../../../shared/ui/button";
+import { loginValidationSchema } from "../model/validation.ts";
 
 
 export function LoginForm() {
@@ -27,19 +28,29 @@ export function LoginForm() {
     const handleSubmit: SubmitEventHandler = async (e) => {
         e.preventDefault();
 
+        const inputsData = {
+            email: loginForm.email,
+            password: loginForm.password,
+        };
+
+        const validationResult = loginValidationSchema.safeParse(inputsData);
+
+        if (!validationResult.success) {
+            toast.error(t("toast.invalidInput"));
+        }
+
         const loginPromise = login({
             variables: {
                 input: {
-                    email: loginForm.email,
-                    password: loginForm.password
+                    ...inputsData,
                 }
             }
         });
 
         toast.promise(loginPromise, {
-            loading: t("toast.loading"),
-            success: t("toast.success"),
-            error: t("toast.error")
+            loading: t("toast.logging"),
+            success: t("toast.loginSuccess"),
+            error: t("toast.loginError")
         });
 
         await loginPromise;
