@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import type { RegisterFields, RegisterFormAction } from "./types.ts";
-import { useRegister, useSetAccessToken } from "../../../auth";
+import { useRegister, useSetAccessToken } from "../../../entities/auth";
 
 
 function registerFormReducer(state: RegisterFields, action: RegisterFormAction): RegisterFields {
