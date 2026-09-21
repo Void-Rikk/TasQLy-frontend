@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 import type { LoginFields, LoginFormAction } from "./types.ts";
+import { useLogin, useSetAccessToken } from "../../../auth";
+import type { AuthPayload } from "../../../auth/model/types.ts";
 
 
 function loginFormReducer(state: LoginFields, action: LoginFormAction) {
@@ -28,4 +30,12 @@ const initialFormState: LoginFields = {
 export function useLoginForm() {
 
     return useReducer(loginFormReducer, initialFormState);
+}
+
+export function useAuthLogin() {
+    const setAccessToken = useSetAccessToken();
+
+    return useLogin({
+        onCompleted: (data: { login: AuthPayload }) => setAccessToken(data.login.accessToken),
+    });
 }

@@ -1,4 +1,4 @@
-import { useRegisterForm } from "../model/hooks.ts";
+import { useAuthRegister, useRegisterForm } from "../model/hooks.ts";
 import { RegisterFormFields } from "./register-form-fields.tsx";
 import {
     changeConfirmPasswordAction,
@@ -8,7 +8,6 @@ import {
 } from "../model/action-creators.ts";
 import { Button } from "../../../shared/ui/button";
 import { useTranslation } from "react-i18next";
-import { useRegister } from "../../../entities/user";
 import type { SubmitEventHandler } from "react";
 import { registerValidationSchema } from "../model/validation.ts";
 import toast from "react-hot-toast";
@@ -20,7 +19,7 @@ export function RegisterForm() {
 
     const { t } = useTranslation("auth");
 
-    const [register, { loading }] = useRegister();
+    const [register, { loading }] = useAuthRegister();
 
     const navigate = useNavigate();
 

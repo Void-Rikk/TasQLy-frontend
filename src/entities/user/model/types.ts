@@ -5,7 +5,3 @@ export type User = {
     name: string;
     email: string;
 }
-
-export type AuthPayload = {
-    accessToken: string;
-}

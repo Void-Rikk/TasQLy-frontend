@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import type { RegisterFields, RegisterFormAction } from "./types.ts";
+import { useRegister, useSetAccessToken } from "../../../auth";
 
 
 function registerFormReducer(state: RegisterFields, action: RegisterFormAction): RegisterFields {
@@ -42,4 +43,12 @@ const initialFormState: RegisterFields = {
 export function useRegisterForm() {
 
     return useReducer(registerFormReducer, initialFormState);
+}
+
+export function useAuthRegister() {
+    const setAccessToken = useSetAccessToken();
+
+    return useRegister({
+        onCompleted: (data: { register: { accessToken: string } }) => setAccessToken(data.register.accessToken)
+    });
 }

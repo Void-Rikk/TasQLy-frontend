@@ -1,7 +1,6 @@
-import { useLoginForm } from "../model/hooks.ts";
+import { useAuthLogin, useLoginForm } from "../model/hooks.ts";
 import { LoginFormFields } from "./login-form-fields.tsx";
 import { changeEmailAction, changePasswordAction } from "../model/action-creators.ts";
-import { useLogin } from "../../../entities/user";
 import type { SubmitEventHandler } from "react";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
@@ -13,7 +12,7 @@ import { loginValidationSchema } from "../model/validation.ts";
 export function LoginForm() {
     const [loginForm, dispatch] = useLoginForm();
 
-    const [login, { loading }] = useLogin();
+    const [login, { loading }] = useAuthLogin();
 
     const { t } = useTranslation("auth");
 

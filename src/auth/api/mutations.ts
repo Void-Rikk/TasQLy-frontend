@@ -1,5 +1,5 @@
-import { gql, type TypedDocumentNode } from "@apollo/client";
 import type { AuthPayload } from "../model/types.ts";
+import { gql, type TypedDocumentNode } from "@apollo/client";
 
 
 type LoginMutation = {
