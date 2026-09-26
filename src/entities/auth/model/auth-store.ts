@@ -1,4 +1,5 @@
 import { create } from "zustand/react";
+import { devtools } from "zustand/middleware";
 
 
 type AuthState = {
@@ -7,7 +8,11 @@ type AuthState = {
     setAccessToken: (token: string | null) => void;
 };
 
-export const useAuthStore = create<AuthState>()((set) => ({
-    accessToken: null,
-    setAccessToken: (token) => set({ accessToken: token })
-}));
+export const useAuthStore = create<AuthState>()(
+    devtools(
+        (set) => ({
+            accessToken: null,
+            setAccessToken: (token) => set({accessToken: token})
+        })
+    )
+);

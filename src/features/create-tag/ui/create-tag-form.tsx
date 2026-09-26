@@ -9,7 +9,7 @@ import { Separator } from "../../../shared/ui/separator";
 
 
 export function CreateTagForm() {
-    const [createTag, { loading: tagCreating }] = useCreateTag();
+    const [createTag, { loading: tagCreating}] = useCreateTag();
 
     const [form, setters] = useCreateTagForm();
 

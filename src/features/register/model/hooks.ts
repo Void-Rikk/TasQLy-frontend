@@ -21,7 +21,7 @@ function registerFormReducer(state: RegisterFields, action: RegisterFormAction):
         case "CHANGE_NAME": {
             return {
                 ...state,
-                password: action.payload,
+                name: action.payload,
             }
         }
         case "CHANGE_CONFIRM_PASSWORD": {

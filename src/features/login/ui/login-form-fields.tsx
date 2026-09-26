@@ -24,6 +24,7 @@ export function LoginFormFields({ email, onEmailChange, onPasswordChange, passwo
                 </Label>
                 <Input
                     id={"login-form-email"}
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
                     placeholder={ t("placeholders.email") }
                     value={ email }
                     type="email"
@@ -39,6 +40,7 @@ export function LoginFormFields({ email, onEmailChange, onPasswordChange, passwo
                 </Label>
                 <Input
                     id="login-form-password"
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
                     type="password"
                     placeholder={ t("placeholders.password") }
                     value={ password }

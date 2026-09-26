@@ -76,6 +76,7 @@ export function RegisterForm() {
     return (
         <form
             onSubmit={ handleSubmit }
+            className={ `flex flex-col gap-4` }
         >
             <RegisterFormFields
                 email={ form.email }

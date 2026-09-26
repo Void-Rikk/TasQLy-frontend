@@ -60,6 +60,7 @@ export function LoginForm() {
     return (
         <form
             onSubmit={ handleSubmit }
+            className={ `flex flex-col gap-4` }
         >
             <LoginFormFields
                 email={ loginForm.email }
@@ -68,14 +69,14 @@ export function LoginForm() {
                 onPasswordChange={ handlePasswordChange }
             />
             <Button
-                className={ `uppercase bg-none 
+                className={ `uppercase bg-none
                 ${ loading && "animate-pulse" }
                 bg-linear-to-r from-blue-400 via-blue-500 to-blue-600 
                 hover:bg-none hover:bg-linear-to-r hover:from-blue-500 hover:via-blue-600 hover:to-blue-700` }
                 type="submit"
                 disabled={ loading }
             >
-                { t("submitButton") }
+                { t("loginButton") }
             </Button>
         </form>
     );

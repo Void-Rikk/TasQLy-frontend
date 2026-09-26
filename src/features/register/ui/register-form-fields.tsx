@@ -39,6 +39,7 @@ export function RegisterFormFields({
 
                 <Input
                     id="register-form-name"
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
                     value={ name }
                     onChange={ (e) => onNameChange(e.target.value) }
                     placeholder={ t("placeholders.name") }
@@ -54,6 +55,7 @@ export function RegisterFormFields({
 
                 <Input
                     id="register-form-email"
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
                     value={ email }
                     onChange={ (e) => onEmailChange(e.target.value) }
                     placeholder={ t("placeholders.email") }
@@ -69,6 +71,8 @@ export function RegisterFormFields({
 
                 <Input
                     id="register-form-password"
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
+                    type="password"
                     value={ password }
                     onChange={ (e) => onPasswordChange(e.target.value) }
                     placeholder={ t("placeholders.password") }
@@ -84,6 +88,8 @@ export function RegisterFormFields({
 
                 <Input
                     id="register-form-confirm-password"
+                    className={ `bg-none bg-(--bg-light) shadow-(--shadow-m)` }
+                    type="password"
                     value={ confirmPassword }
                     onChange={ (e) => onConfirmPasswordChange(e.target.value) }
                     placeholder={ t("placeholders.confirmPassword") }

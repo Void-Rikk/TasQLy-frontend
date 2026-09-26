@@ -24,7 +24,7 @@ export function changePasswordAction(payload: string): RegisterFormAction {
 
 export function changeConfirmPasswordAction(payload: string): RegisterFormAction {
     return {
-        type: "CHANGE_PASSWORD",
+        type: "CHANGE_CONFIRM_PASSWORD",
         payload,
     }
 }
