@@ -1,5 +1,5 @@
 import { create } from "zustand/react";
-import { devtools } from "zustand/middleware";
+import { devtools, persist } from "zustand/middleware";
 
 
 type AuthState = {
@@ -10,9 +10,12 @@ type AuthState = {
 
 export const useAuthStore = create<AuthState>()(
     devtools(
-        (set) => ({
-            accessToken: null,
-            setAccessToken: (token) => set({accessToken: token})
-        })
+        persist(
+            (set) => ({
+                accessToken: null,
+                setAccessToken: (token) => set({accessToken: token})
+            }),
+            { name: "accessToken" }
+        )
     )
 );

@@ -1,6 +1,6 @@
 import { AuthForm } from "../../../widgets/auth-form";
 import { SwitchLocaleButton } from "../../../features/switch-locale";
-import { ToggleThemeButton } from "../../../features/toggle-theme/ui/toggle-theme-button.tsx";
+import { ToggleThemeButton } from "../../../features/toggle-theme";
 
 
 export function AuthPage() {

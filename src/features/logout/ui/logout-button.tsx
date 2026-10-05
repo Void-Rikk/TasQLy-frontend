@@ -17,7 +17,6 @@ export function LogoutButton({ className }: LogoutButtonProps) {
 
     const handleLogout = async () => {
         await logout();
-
         navigate("/auth");
     }
 

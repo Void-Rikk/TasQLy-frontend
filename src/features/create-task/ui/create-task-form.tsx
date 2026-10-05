@@ -63,7 +63,7 @@ export function CreateTaskForm() {
                     { t("newTaskSection.header") }
                 </> }
             />
-            <form // ToDo: нужна декомпозиция
+            <form
                 className={ `p-4 flex flex-col gap-4  ${!isOpen ? "hidden" : ""}` }
                 onSubmit={ onSubmit }
             >

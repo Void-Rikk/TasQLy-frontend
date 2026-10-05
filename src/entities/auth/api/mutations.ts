@@ -61,20 +61,3 @@ export const LOGOUT: TypedDocumentNode<
         logout
     }
 `;
-
-type RefreshMutation = {
-    refresh: AuthPayload;
-}
-
-type RefreshMutationVariables = Record<string, never>
-
-export const REFRESH: TypedDocumentNode<
-    RefreshMutation,
-    RefreshMutationVariables
-> = gql`
-    mutation Refresh {
-        refresh {
-            accessToken
-        }
-    }
-`;

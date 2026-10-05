@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, REFRESH, REGISTER } from "./mutations.ts";
+import { LOGIN, LOGOUT, REGISTER } from "./mutations.ts";
 import { useMutation } from "@apollo/client/react";
 
 
@@ -16,12 +16,6 @@ export function useRegister({ onCompleted }: { onCompleted?: (...args: unknown[]
 
 export function useLogout({ onCompleted }: { onCompleted?: (...args: unknown[]) => void }) {
     return useMutation(LOGOUT, {
-        onCompleted
-    });
-}
-
-export function useRefresh({ onCompleted }: { onCompleted?: (...args: unknown[]) => void }) {
-    return useMutation(REFRESH, {
         onCompleted
     });
 }
