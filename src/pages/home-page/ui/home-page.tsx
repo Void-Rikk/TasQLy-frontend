@@ -6,6 +6,7 @@ import { TasksSection } from "../../../widgets/tasks-section";
 import { ToggleThemeButton } from "../../../features/toggle-theme";
 import { SwitchLocaleButton } from "../../../features/switch-locale";
 import { LogoutButton } from "../../../features/logout";
+import { FilterStatusPanel } from "../../../features/filter-task-by-status";
 
 
 function HomePage() {
@@ -29,6 +30,7 @@ function HomePage() {
                     <TasksStatsPanel />
                     <CreateTaskForm />
                     <ManageTagsPanel />
+                    <FilterStatusPanel />
                 </aside>
 
                 <main>

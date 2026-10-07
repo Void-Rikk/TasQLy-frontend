@@ -1,13 +1,18 @@
 import { useTranslation } from "react-i18next";
-import { TaskCard, useTasks } from "../../../entities/task";
+import { TaskCard, useTasks, useTasksFiltersStatus } from "../../../entities/task";
 import { DeleteTaskButton } from "../../../features/delete-task";
 import { AdvanceTaskButton } from "../../../features/advance-task";
 import { TasksSkeletons } from "./tasks-skeletons.tsx";
 
 
 export function TasksSection() {
+    const taskStatusFilter = useTasksFiltersStatus();
 
-    const { data: tasksData, loading: loadingTasks } = useTasks();
+    const { data: tasksData, loading: loadingTasks } = useTasks({
+        variables: {
+            status: taskStatusFilter === "ALL" ? undefined : taskStatusFilter,
+        }
+    });
 
     const { t } = useTranslation("home");
 
@@ -31,7 +36,7 @@ export function TasksSection() {
                     { tasksData ? tasksData.tasks.length : 0 }
                 </span>
                 <div
-                    className={ `h-[1px] w-full rounded-xl
+                    className={ `h-px w-full rounded-xl
                     bg-linear-to-r from-(--text-muted) to-transparent to-80%` }
                 >
                 </div>
