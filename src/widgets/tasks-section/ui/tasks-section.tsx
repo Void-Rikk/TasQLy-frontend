@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { TaskCard, useTasks, useTasksFiltersStatus } from "../../../entities/task";
+import { NoTasksMessage, TaskCard, useTasks, useTasksFiltersStatus } from "../../../entities/task";
 import { DeleteTaskButton } from "../../../features/delete-task";
 import { AdvanceTaskButton } from "../../../features/advance-task";
 import { TasksSkeletons } from "./tasks-skeletons.tsx";
@@ -41,6 +41,7 @@ export function TasksSection() {
                 >
                 </div>
             </header>
+            { tasksData && tasksData.tasks.length === 0 && <NoTasksMessage /> }
             <ul
                 className={ `list-none flex flex-col gap-3 w-150 max-md:w-full` }
             >

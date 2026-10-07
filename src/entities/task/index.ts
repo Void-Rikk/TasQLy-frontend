@@ -3,7 +3,7 @@ import { TaskCard } from "./ui/task-card.tsx";
 import { type TaskStats, calculateTaskStats } from "./model/stats.ts";
 import type { Task, TaskPriority, TaskStatus } from "./model/types.ts";
 import { useTasksFiltersStatus, useSetTasksFiltersStatus } from "./model/tasks-filters-store.ts";
-
+import { NoTasksMessage } from "./ui/no-tasks-message.tsx";
 
 
 export {
@@ -14,7 +14,8 @@ export {
     useAdvanceTask,
     calculateTaskStats,
     useTasksFiltersStatus,
-    useSetTasksFiltersStatus
+    useSetTasksFiltersStatus,
+    NoTasksMessage
 }
 
 export type {
