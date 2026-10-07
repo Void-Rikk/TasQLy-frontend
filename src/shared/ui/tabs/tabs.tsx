@@ -1,3 +1,4 @@
+import { twMerge } from "tailwind-merge";
 
 type Tab = {
     id: string;
@@ -8,13 +9,15 @@ interface TabsProps {
      tabs: Tab[];
      activeTab: string;
      setActiveTab: (tabId: string) => void;
+     className?: string;
 }
 
-export function Tabs({ tabs, activeTab, setActiveTab }: TabsProps) {
+export function Tabs({ tabs, activeTab, setActiveTab, className }: TabsProps) {
 
     return (
         <div
-            className={ `flex justify-evenly bg-(--bg) p-2 gap-2 shadow-(--shadow-inset-s) rounded-lg` }
+            className={ twMerge(`flex justify-evenly bg-(--bg) 
+            p-2 gap-2 shadow-(--shadow-inset-s) rounded-lg`, className || "") }
         >
             {
                 tabs.map(tab => (
@@ -44,7 +47,7 @@ function Tab({ onClick, name, isActive }: TabProps) {
             className={ `text-(--text) grow text-center rounded-md py-1
             ${ isActive
                 ? "bg-(--bg-light) border-(--border-card) shadow-(--shadow-s)"
-                : "hover:bg-(--bg-light)/60 hover:cursor-pointer" 
+                : "hover:bg-(--bg-light)/60 hover:cursor-pointer text-(--text-muted)" 
             }
             transition-all
             ` }
