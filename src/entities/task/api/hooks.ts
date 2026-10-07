@@ -1,10 +1,10 @@
 import { useMutation, useQuery } from "@apollo/client/react";
-import { GET_TASKS } from "./queries.ts";
+import { GET_TASKS, type GetTasksQuery, type GetTasksQueryVariables } from "./queries.ts";
 import { ADVANCE_TASK, CREATE_TASK, DELETE_TASK } from "./mutations.ts";
 import { NEW_TASK_FRAGMENT } from "./fragments.ts";
 
-export function useTasks() {
-    return useQuery(GET_TASKS);
+export function useTasks(options?: useQuery.Options<GetTasksQuery, GetTasksQueryVariables>) {
+    return useQuery(GET_TASKS, options);
 }
 
 export function useCreateTask() {

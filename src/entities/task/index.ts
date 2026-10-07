@@ -2,6 +2,9 @@ import { useTasks, useCreateTask, useDeleteTask, useAdvanceTask } from "./api/ho
 import { TaskCard } from "./ui/task-card.tsx";
 import { type TaskStats, calculateTaskStats } from "./model/stats.ts";
 import type { Task, TaskPriority, TaskStatus } from "./model/types.ts";
+import { useTasksFiltersStatus, useSetTasksFiltersStatus } from "./model/tasks-filters-store.ts";
+
+
 
 export {
     useTasks,
@@ -9,7 +12,9 @@ export {
     TaskCard,
     useDeleteTask,
     useAdvanceTask,
-    calculateTaskStats
+    calculateTaskStats,
+    useTasksFiltersStatus,
+    useSetTasksFiltersStatus
 }
 
 export type {

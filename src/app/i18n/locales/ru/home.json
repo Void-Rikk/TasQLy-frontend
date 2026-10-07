@@ -67,7 +67,10 @@
   },
   "statusFilterSection": {
     "header": "СТАТУС",
-    "allTasksOption": "Все задачи"
+    "allTasksOption": "Все задачи",
+    "toDoOption": "Сделать",
+    "inProgressOption": "В процессе",
+    "doneOption": "Сделано"
   },
   "tagFilterSection": {
     "header": "ФИЛЬТР ПО ТЕГУ",

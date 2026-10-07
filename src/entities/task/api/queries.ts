@@ -2,18 +2,20 @@ import { gql, type TypedDocumentNode } from "@apollo/client";
 import type { Task } from "../model/types.ts";
 
 
-type GetTasksQuery = {
+export type GetTasksQuery = {
     tasks: Task[];
 }
 
-type GetTasksQueryVariables = Record<string, never>;
+export type GetTasksQueryVariables = {
+    status?: "TO_DO" | "IN_PROGRESS" | "DONE"
+};
 
 export const GET_TASKS: TypedDocumentNode<
     GetTasksQuery,
     GetTasksQueryVariables
 > = gql`
-    query GetTasks {
-        tasks {
+    query GetTasks($status: String) {
+        tasks(status: $status) {
             id
             title
             description

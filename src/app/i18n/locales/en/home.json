@@ -67,7 +67,10 @@
   },
   "statusFilterSection": {
     "header": "STATUS",
-    "allTasksOption": "All tasks"
+    "allTasksOption": "All tasks",
+    "toDoOption": "To Do",
+    "inProgressOption": "In Progress",
+    "doneOption": "Done"
   },
   "tagFilterSection": {
     "header": "FILTER BY TAG",
