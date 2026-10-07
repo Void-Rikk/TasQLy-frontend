@@ -21,6 +21,7 @@ export function StatusTabs() {
         <Tabs
             tabs={ tabs }
             activeTab={ activeTab }
+            // @ts-ignore
             setActiveTab={ setActiveTab }
             className={ `flex-col font-mono text-sm` }
         />
