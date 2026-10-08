@@ -62,7 +62,6 @@
     "tagsLoading": "Loading your tags"
   },
   "searchSection": {
-    "searchLabel": "SEARCH",
     "searchPlaceholder": "Search tasks..."
   },
   "statusFilterSection": {

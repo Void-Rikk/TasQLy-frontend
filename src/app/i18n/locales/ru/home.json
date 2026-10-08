@@ -62,7 +62,6 @@
     "tagsLoading": "Загружаем ваши теги"
   },
   "searchSection": {
-    "searchLabel": "ПОИСК",
     "searchPlaceholder": "Поиск задач..."
   },
   "statusFilterSection": {

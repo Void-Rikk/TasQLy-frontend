@@ -1,5 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { NoTasksMessage, TaskCard, useTasks, useTasksFiltersStatus } from "../../../entities/task";
+import {
+    NoTasksMessage,
+    TaskCard,
+    useTasks,
+    useTasksFiltersSearchQuery,
+    useTasksFiltersStatus
+} from "../../../entities/task";
 import { DeleteTaskButton } from "../../../features/delete-task";
 import { AdvanceTaskButton } from "../../../features/advance-task";
 import { TasksSkeletons } from "./tasks-skeletons.tsx";
@@ -7,10 +13,12 @@ import { TasksSkeletons } from "./tasks-skeletons.tsx";
 
 export function TasksSection() {
     const taskStatusFilter = useTasksFiltersStatus();
+    const taskSearchQueryFilter = useTasksFiltersSearchQuery();
 
     const { data: tasksData, loading: loadingTasks } = useTasks({
         variables: {
             status: taskStatusFilter === "ALL" ? undefined : taskStatusFilter,
+            searchQuery: taskSearchQueryFilter,
         }
     });
 
@@ -37,7 +45,7 @@ export function TasksSection() {
                 </span>
                 <div
                     className={ `h-px w-full rounded-xl
-                    bg-linear-to-r from-(--text-muted) to-transparent to-80%` }
+                    bg-linear-to-r from-(--text-muted) to-transparent to-100%` }
                 >
                 </div>
             </header>

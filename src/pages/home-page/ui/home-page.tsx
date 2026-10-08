@@ -7,6 +7,7 @@ import { ToggleThemeButton } from "../../../features/toggle-theme";
 import { SwitchLocaleButton } from "../../../features/switch-locale";
 import { LogoutButton } from "../../../features/logout";
 import { FilterStatusPanel } from "../../../features/filter-task-by-status";
+import { SearchTaskPanel } from "../../../features/search-task";
 
 
 function HomePage() {
@@ -33,7 +34,10 @@ function HomePage() {
                     <FilterStatusPanel />
                 </aside>
 
-                <main>
+                <main
+                    className={ `flex flex-col gap-2` }
+                >
+                    <SearchTaskPanel />
                     <TasksSection />
                 </main>
             </div>

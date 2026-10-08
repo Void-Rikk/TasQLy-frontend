@@ -2,7 +2,12 @@ import { useTasks, useCreateTask, useDeleteTask, useAdvanceTask } from "./api/ho
 import { TaskCard } from "./ui/task-card.tsx";
 import { type TaskStats, calculateTaskStats } from "./model/stats.ts";
 import type { Task, TaskPriority, TaskStatus } from "./model/types.ts";
-import { useTasksFiltersStatus, useSetTasksFiltersStatus } from "./model/tasks-filters-store.ts";
+import {
+    useTasksFiltersStatus,
+    useSetTasksFiltersStatus,
+    useTasksFiltersSearchQuery,
+    useSetTasksFiltersSearchQuery
+} from "./model/tasks-filters-store.ts";
 import { NoTasksMessage } from "./ui/no-tasks-message.tsx";
 
 
@@ -15,7 +20,9 @@ export {
     calculateTaskStats,
     useTasksFiltersStatus,
     useSetTasksFiltersStatus,
-    NoTasksMessage
+    NoTasksMessage,
+    useTasksFiltersSearchQuery,
+    useSetTasksFiltersSearchQuery,
 }
 
 export type {

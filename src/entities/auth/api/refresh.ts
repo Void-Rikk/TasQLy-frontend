@@ -14,7 +14,5 @@ export async function refreshAccessToken(): Promise<string> {
 
     if (errors) throw new Error('Refresh failed');
 
-    console.log(data.refresh);
-
     return data.refresh.accessToken;
 }
