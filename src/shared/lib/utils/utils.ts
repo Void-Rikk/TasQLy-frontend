@@ -26,7 +26,7 @@ export const useMedia = (query: string) => {
         setMatches(window.matchMedia(query).matches);
 
     useEffect(() => {
-        handleChange();;
+        handleChange();
 
         const matchMedia = window.matchMedia(query);
 
