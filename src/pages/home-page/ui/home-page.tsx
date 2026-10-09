@@ -8,6 +8,7 @@ import { SwitchLocaleButton } from "../../../features/switch-locale";
 import { LogoutButton } from "../../../features/logout";
 import { FilterStatusPanel } from "../../../features/filter-task-by-status";
 import { SearchTaskPanel } from "../../../features/search-task";
+import { FilterTagsPanel } from "../../../features/filter-task-by-tags";
 
 
 function HomePage() {
@@ -32,6 +33,7 @@ function HomePage() {
                     <CreateTaskForm />
                     <ManageTagsPanel />
                     <FilterStatusPanel />
+                    <FilterTagsPanel />
                 </aside>
 
                 <main

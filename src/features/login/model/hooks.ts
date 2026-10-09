@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import type { LoginFields, LoginFormAction } from "./types.ts";
 import { useLogin, useSetAccessToken } from "../../../entities/auth";
-import type { AuthPayload } from "../../../entities/auth/model/types.ts";
+import type { AuthPayload } from "../../../entities/auth";
 
 
 function loginFormReducer(state: LoginFields, action: LoginFormAction) {

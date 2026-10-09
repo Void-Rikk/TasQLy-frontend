@@ -6,7 +6,9 @@ import {
     useTasksFiltersStatus,
     useSetTasksFiltersStatus,
     useTasksFiltersSearchQuery,
-    useSetTasksFiltersSearchQuery
+    useSetTasksFiltersSearchQuery,
+    useTasksFiltersTagIds,
+    useSetTasksFiltersTagIds
 } from "./model/tasks-filters-store.ts";
 import { NoTasksMessage } from "./ui/no-tasks-message.tsx";
 
@@ -23,6 +25,8 @@ export {
     NoTasksMessage,
     useTasksFiltersSearchQuery,
     useSetTasksFiltersSearchQuery,
+    useTasksFiltersTagIds,
+    useSetTasksFiltersTagIds,
 }
 
 export type {

@@ -4,7 +4,7 @@ import {
     TaskCard,
     useTasks,
     useTasksFiltersSearchQuery,
-    useTasksFiltersStatus
+    useTasksFiltersStatus, useTasksFiltersTagIds
 } from "../../../entities/task";
 import { DeleteTaskButton } from "../../../features/delete-task";
 import { AdvanceTaskButton } from "../../../features/advance-task";
@@ -14,11 +14,13 @@ import { TasksSkeletons } from "./tasks-skeletons.tsx";
 export function TasksSection() {
     const taskStatusFilter = useTasksFiltersStatus();
     const taskSearchQueryFilter = useTasksFiltersSearchQuery();
+    const taskTagIds = useTasksFiltersTagIds();
 
     const { data: tasksData, loading: loadingTasks } = useTasks({
         variables: {
             status: taskStatusFilter === "ALL" ? undefined : taskStatusFilter,
             searchQuery: taskSearchQueryFilter,
+            tagIds: [...taskTagIds],
         }
     });
 

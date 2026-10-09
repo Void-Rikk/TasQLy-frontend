@@ -53,7 +53,7 @@ export function TaskCard({ task, headerActions, footerActions }: TaskCardProps) 
                 className={ `text-(--text-muted) text-sm truncate w-[85%]` }
             >
                 { task.description }
-                { !task.description && <p aria-hidden="true" className={ `opacity-0` }>desc</p> }
+                { !task.description && <span aria-hidden="true" className={ `opacity-0 block` }>desc</span> }
             </p>
             <div
                 className={ `flex flex-wrap gap-1.5 max-md:flex-nowrap max-md:overflow-hidden` }

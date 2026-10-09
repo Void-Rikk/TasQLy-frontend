@@ -9,14 +9,15 @@ export type GetTasksQuery = {
 export type GetTasksQueryVariables = {
     status?: "TO_DO" | "IN_PROGRESS" | "DONE",
     searchQuery?: string,
+    tagIds?: string[],
 };
 
 export const GET_TASKS: TypedDocumentNode<
     GetTasksQuery,
     GetTasksQueryVariables
 > = gql`
-    query GetTasks($status: String, $searchQuery: String) {
-        tasks(status: $status, searchQuery: $searchQuery) {
+    query GetTasks($status: String, $searchQuery: String, $tagIds: [ID!]) {
+        tasks(status: $status, searchQuery: $searchQuery, tagIds: $tagIds) {
             id
             title
             description

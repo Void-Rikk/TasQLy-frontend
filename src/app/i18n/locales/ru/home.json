@@ -72,8 +72,7 @@
     "doneOption": "Сделано"
   },
   "tagFilterSection": {
-    "header": "ФИЛЬТР ПО ТЕГУ",
-    "allTag": "Все"
+    "header": "ФИЛЬТР ПО ТЕГУ"
   },
   "taskStatus": {
     "TO_DO": "Сделать",

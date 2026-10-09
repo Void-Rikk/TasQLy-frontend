@@ -72,8 +72,7 @@
     "doneOption": "Done"
   },
   "tagFilterSection": {
-    "header": "FILTER BY TAG",
-    "allTag": "All"
+    "header": "FILTER BY TAG"
   },
   "taskStatus": {
     "TO_DO": "To Do",
