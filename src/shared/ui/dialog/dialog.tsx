@@ -18,8 +18,8 @@ export function DialogContent({ children, className, titleContent, ...props }: D
         <RDialog.Portal>
             <RDialog.Overlay className={ `fixed inset-0 bg-[#00000080] data-[state=open]:animate-overlay-show"` } />
             <RDialog.Content
-                className={ twMerge( `fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-[500px] 
-                -translate-x-1/2 -translate-y-1/2 rounded-md bg-(--bg) p-[25px] shadow-(--shadow-m)
+                className={ twMerge( `fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-125 
+                -translate-x-1/2 -translate-y-1/2 rounded-md bg-(--bg) p-6.25 shadow-(--shadow-m)
                 focus:outline-none data-[state=open]:animate-content-show`, className ) }
                 { ...props }
                 ref={ ref }

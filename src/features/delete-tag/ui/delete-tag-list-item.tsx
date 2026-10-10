@@ -1,6 +1,5 @@
 import { TagItem } from "../../../shared/ui/tag-item";
-import { Button } from "../../../shared/ui/button";
-import { X } from "lucide-react";
+import { ConfirmTagDeletionModal } from "./confirm-tag-deletion-modal.tsx";
 
 
 interface DeleteTagListItemProps {
@@ -19,14 +18,11 @@ export function DeleteTagListItem({ id, name, onDelete }: DeleteTagListItemProps
                 className="self-center hover:cursor-default"
                 name={ name }
             />
-            <Button
-                className="p-1 size-6 flex justify-center items-center"
-                onClick={ () => onDelete(id) }
-            >
-                <X
-                    className="text-(--danger)"
-                />
-            </Button>
+            <ConfirmTagDeletionModal
+                id={ id }
+                onDelete={ () => onDelete(id) }
+                tagName={ name }
+            />
         </div>
     );
 }
