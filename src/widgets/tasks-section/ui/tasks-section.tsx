@@ -64,6 +64,7 @@ export function TasksSection() {
                             headerActions={
                             <DeleteTaskButton
                                 id={ task.id }
+                                taskName={ task.title }
                             /> }
                             footerActions={
                             <AdvanceTaskButton

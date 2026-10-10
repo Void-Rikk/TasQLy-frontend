@@ -94,6 +94,11 @@
     "tagName": "Tag name",
     "button": "DELETE"
   },
+  "deleteTask": {
+    "message": "Are you sure you want to delete this task?",
+    "taskName": "Task name",
+    "button": "DELETE"
+  },
   "taskListHeader": "ALL TASKS",
   "taskAdvanceButton": "ADVANCE"
 }

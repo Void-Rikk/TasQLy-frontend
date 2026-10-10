@@ -94,6 +94,11 @@
     "tagName": "Название тега",
     "button": "УДАЛИТЬ"
   },
+  "deleteTask": {
+    "message": "Вы уверены, что хотите удалить эту задачу?",
+    "taskName": "Название задачи",
+    "button": "УДАЛИТЬ"
+  },
   "taskListHeader": "ВСЕ ЗАДАЧИ",
   "taskAdvanceButton": "ПРОДВИНУТЬ"
 }
